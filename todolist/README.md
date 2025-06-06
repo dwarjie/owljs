@@ -1,7 +1,7 @@
 # Todo App using Owljs
 The purpose of this exercise is for me to understand how Owljs works and basically my introduction to the Owl Framework.
 
-Here's the link if you're interested: (Todo-App-Tutorial)[https://owl-docs.vercel.app/started/tutorial_todoapp#_top]
+Here's the link if you're interested: [Todoapp tutorial](https://owl-docs.vercel.app/started/tutorial_todoapp#_top)
 
 ## What did I learn?
 - How to use Owljs with Vite (since I'm more comfortable with Vite instead of webpack)
