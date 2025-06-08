@@ -1,0 +1,10 @@
+<div class="d-flex flex-column align-items-center">
+  <div t-if="this.props.loading" class="loader"></div>
+  <div t-else="" class="text-center">
+    <h1 t-esc="this.state.city" class="fw-bold"/>
+    <div class="d-flex flex-row align-items-center">
+      <img t-attf-src="../../public/icons/{{this.props.icon}}.svg" class="icons"/>
+      <h1 class="fw-bold"><t t-esc="this.state.weather.temp"/>°c</h1>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="w-auto">
+  <input placeholder="Enter a Country" class="w-auto" 
+    t-on-keyup="searchCity" t-ref="searchInput"/>
+  <p t-if="this.props.error.value" t-esc="this.props.error.value" class="error text-center"/>
+</div>

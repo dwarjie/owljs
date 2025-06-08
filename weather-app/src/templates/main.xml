@@ -1,0 +1,4 @@
+<div class="hero w-100 h-100 d-flex flex-column align-items-center justify-content-center gap-5">
+  <Search city="city" error="error"/>
+  <MainInfo icon="icon.value" loading="loading.value"/>
+</div>
