@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_dashboard.AwesomeDashboard">
+        <Layout display="{ controlPanel: {}}" className="'o_dashboard h-100'">
+            <t t-set-slot="control-panel-create-button">
+                <button t-on-click="openCustomers" type="button" class="btn btn-primary" title="Customer">Customer</button>
+                <button t-on-click="openLuads" type="button" class="btn btn-primary" title="Leads">Leads</button>
+            </t>
+            <div class="d-flex flex-wrap" t-if="stats.isReady">
+                <DashboardItem>
+                    <div class="text-center">
+                        <p>Avg t-shirt order(s) this month</p>
+                        <h1 class="text-success"><t t-out="stats.average_quantity"/></h1>
+                    </div>
+                </DashboardItem>
+                <DashboardItem size="2">
+                    <div class="text-center">
+                        <p>Avg time for order to move from "new" to "sent"/"cancelled"</p>
+                        <h1 class="text-success"><t t-out="stats.average_time"/></h1>
+                    </div>
+                </DashboardItem>
+                <DashboardItem>
+                    <div class="text-center">
+                        <p># of New Orders this month</p>
+                        <h1 class="text-success"><t t-out="stats.nb_new_orders"/></h1>
+                    </div>
+                </DashboardItem>
+                <DashboardItem>
+                    <div class="text-center">
+                        <p># of Cancelled Orders this month</p>
+                        <h1 class="text-success"><t t-out="stats.nb_cancelled_orders"/></h1>
+                    </div>
+                </DashboardItem>
+                <DashboardItem>
+                    <div class="text-center">
+                        <p>Total amount of New Orders this month</p>
+                        <h1 class="text-success"><t t-out="stats.total_amount"/></h1>
+                    </div>
+                </DashboardItem>
+                <DashboardItem>
+                    <PieChart label="'Shirt ordered by size'" data="stats.orders_by_size"/>
+                </DashboardItem>
+            </div>
+        </Layout>
+    </t>
+
+</templates>

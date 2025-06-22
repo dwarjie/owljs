@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="awesome.Card">
+        <div class="card d-inline-block m-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title d-inline-block"><t t-esc="this.props.title"/></h5>
+                <button class="btn ms-2" t-on-click="toggleCard">Toggle</button>
+                <div t-if="state.isOpen">
+                    <p class="card-text">
+                        <t t-slot="content"/>
+                    </p>
+                    <a href="#" class="btn btn-primary">
+                        <t t-slot="action" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
