@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_clicker.ClientAction">
+        <div class="containuer-fluid p-2">
+            <div class="d-flex align-items-center gap-1">
+                <span>Clicks: <ClickerValue /></span>
+                <button t-on-click="incrementBtn" class="btn btn-primary">Increment</button>
+            </div>
+            <div t-if="clicker.state.level >= 1" class="card mt-2 rounded-1">
+                <div class="card-header">
+                    <t t-esc="clicker.state.clickBot" />x Clickbots (10 clicks/10seconds) <i class="fa fa-android" aria-hidden="true"></i>
+                </div>
+                <div class="card-body" t-if="clicker.state.clicks >= 1000">
+                    <button class="btn btn-primary" t-on-click="buyClickBot">Buy Clickbot (1,000 clicks)</button>
+                </div>
+                <div class="card-body" t-else="">
+                    <button class="btn btn-primary disabled" aria-disabled="true">Buy Clickbot (1,000 clicks)</button>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t t-name="awesome_clicker.ClickerSystrayItem">
+        <div class="d-flex align-items-center gap-1 me-1">
+            <button id="counter_element" class="btn">
+                Clicks:
+                <ClickerValue />
+            </button>
+            <button t-on-click="openClickerPopover" class="btn btn-light"
+                t-ref="increment-btn">Open</button>
+        </div>
+    </t>
+
+</templates>
